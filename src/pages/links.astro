@@ -1,131 +1,234 @@
 ---
-import { Image } from "astro:assets";
-
 import PageLayout from "@/layouts/Base";
-import aboutImg from "@/assets/about-astro.png";
 
 const meta = {
-	title: "About",
-	description: "I'm a starter theme for Astro.build",
+	title: "Links",
+	description: "Links to my favorite books, podcasts, gear, tech, and more.",
 };
 ---
 
 <PageLayout meta={meta}>
-	<div class="space-y-6">
+	  <style>
+        a {
+            text-decoration: underline;
+        }
+    </style>
+
+  <div class="space-y-6">
 		<h1 class="title">Links</h1>
+		<p>My favorite books, podcasts, videos, articles, websites, and gear.</p>
+
+		<h2 class="text-xl font-bold">Books</h2>
+
 		<p>
-		  My favorite books, podcasts, videos, articles, websites, and gear.
+			Check out my <a href="https://www.goodreads.com/user/show/106199148-charlie-sabino"
+				>Goodreads</a
+			> for a full list and ratings.
 		</p>
 
-  <h1>Books</h1>
+		<h2 class="text-xl font-bold">Nonfiction</h2>
 
-    <p>
-Check out my [Goodreads](https://www.goodreads.com/user/show/106199148-charlie-sabino) for a full list and ratings.
+		<h4 class="text-lg font-bold">History, Biographies, and Memoirs</h4>
+		<ul class="list-inside list-disc">
+			<li>
+				<a href="https://www.goodreads.com/book/show/37976541-bad-blood"
+					>Bad Blood by John Carreyou</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/11084145-steve-jobs"
+					>Steve Jobs by Walter Isaacson</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://www.goodreads.com/book/show/122765395-elon-musk?ac=1&fromsearch=true&qid=UCx2sJrHj4&rank=1"
+					>Elon Musk by Walter Isaacson</a
+				>
+			</li>
+			<li>
+				<a
+					href="https://www.goodreads.com/book/show/27220736-shoe-dog?ac=1&fromsearch=true&qid=gc3pnsktYm&rank=1"
+					>Shoe Dog by Phil Knight</a
+				>
+			</li>
+		</ul>
 
-<ul>Nonfiction</ul>
+		<h4 class="text-lg font-bold">Science</h4>
+		<ul class="list-inside list-disc">
+			<li>
+				<a
+					href="https://www.goodreads.com/book/show/25734172-seven-brief-lessons-on-physics?ac=1&fromsearch=true&qid=hyd7d9RrsA&rank=1"
+					>Seven Brief Lessons on Physics by Carlo Rovelli</a
+				>
+				<ul class="list-inside list-disc pl-5">
+					<li>
+						A poetic and philosophical discussion of physics, the universe, and the human condition.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/34466963-why-we-sleep"
+					>Why We Sleep by Matthew Walker</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/37534452-the-circadian-code"
+					>The Circadian Code by Satchin Panda</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/48890486-breath">Breath by James Nestor</a>
+			</li>
+		</ul>
 
-  <li>
-        History, Biographies, and Memoirs
-  </li>
+		<h4 class="text-lg font-bold">Philosophy</h4>
+		<ul class="list-inside list-disc">
+			<li>
+				<a href="https://www.goodreads.com/book/show/1168191.Meditations?ref=navsbss119"
+					>Meditations by Marcus Aurelius</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/55148500-the-almanack-of-naval-ravikant"
+					>The Almanack of Naval Ravikant by Eric Jorgenson</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/52036.Siddhartha?ref=navsbss111"
+					>Siddhartha by Herman Hesse</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/157993.TheLittlePrince"
+					>The Little Prince by Antoine de Saint-Exupéry</a
+				>
+			</li>
+		</ul>
 
-- [_Bad Blood_ by John Carreyou](https://www.goodreads.com/book/show/37976541-bad-blood)
-- [_Steve Jobs_ by Walter Isaacson](https://www.goodreads.com/book/show/11084145-steve-jobs)
-- [_Shoe Dog_ by Phil Knight](https://www.goodreads.com/book/show/27220736-shoe-dog?ac=1&from_search=true&qid=gc3pnsktYm&rank=1)
+		<h4 class="text-lg font-bold">Self-Help</h4>
+		<ul class="list-inside list-disc">
+			<li>
+				<a href="https://www.goodreads.com/book/show/40121378-atomic-habits"
+					>Atomic Habits by James Clear</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/25744928-deep-work">Deep Work by Cal Newport</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/54785515-four-thousand-weeks"
+					>Four Thousand Weeks by Oliver Burkeman</a
+				>
+			</li>
+		</ul>
 
-#### Science
+		<h2 class="text-xl font-bold">Genre Fiction</h2>
 
-- [_Seven Brief Lessons on Physics_ by Carlo Rovelli](https://www.goodreads.com/book/show/25734172-seven-brief-lessons-on-physics?ac=1&from_search=true&qid=hyd7d9RrsA&rank=1)
-  - A poetic and philosophical discussion of physics, the universe, and the human condition.
-- [_Why We Sleep_ by Matthew Walker](https://www.goodreads.com/book/show/34466963-why-we-sleep)
-- [_The Circadian Code_ by Satchin Panda](https://www.goodreads.com/book/show/37534452-the-circadian-code)
-- [_Breath_ by James Nestor](https://www.goodreads.com/book/show/48890486-breath)
+		<p>"Read what you love until you love to read" — Naval</p>
 
-#### Philosophy
-
-- [_Meditations_ by Marcus Aurelius](https://www.goodreads.com/book/show/1168191.Meditations?ref=nav_sb_ss_1_19)
-- [_The Almanack of Naval Ravikant_ by Eric Jorgenson](2https://www.goodreads.com/book/show/55148500-the-almanack-of-naval-ravikant)
-- [_Siddhartha_ by Herman Hesse](https://www.goodreads.com/book/show/52036.Siddhartha?ref=nav_sb_ss_1_11)
-- [_The Little Prince_ by Antoine de Saint-Exupéry](https://www.goodreads.com/book/show/157993.The_Little_Prince)
-
-#### Self-Help
-
-- [_Atomic Habits_ by James Clear](https://www.goodreads.com/book/show/40121378-atomic-habits)
-- [_Deep Work_ by Cal Newport](https://www.goodreads.com/book/show/25744928-deep-work)
-- [_Four Thousand Weeks_ by Oliver Burkeman](https://www.goodreads.com/book/show/54785515-four-thousand-weeks)
-
-## Genre Fiction
-
-"Read what you love until you love to read" — Naval
-
-Sure, genre fiction might not be the most intellectually nourishing material, but it helped
-me get into reading, and for that I am forever grateful. In fact, the first book I
-remember reading is Harry Potter during my first year at the University of Chicago.
-Below are some titles that helped me create a reading habit.
-
-#### Science Fiction
-
-- [_The Martian_ by Andy Weir](https://www.goodreads.com/book/show/18007564-the-martian)
-- [_Project Hail_ Mary by Andy Weir](https://www.goodreads.com/book/show/54493401-project-hail-mary)
-- [_Remembrance of Earth's Past_ by Cixin Liu](https://www.goodreads.com/series/189931-remembrance-of-earth-s-past)
-- [_Recursion_ by Blake Crouch](https://www.goodreads.com/book/show/42046112-recursion)
-
-#### Fantasy
-
-- [_The Stormlight Archive_ by Brandon Sanderson](https://www.goodreads.com/series/49075-the-stormlight-archive)
-- [_The Kingkiller Chronicles_ by Patrick Rothfuss](https://www.goodreads.com/series/45262-the-kingkiller-chronicle)
-
-&nbsp;
-
-# Podcasts
-
-- [Lex Fridman Podcast](https://lexfridman.com/podcast/)
-- [Huberman Lab](https://hubermanlab.com/)
-- [CoRecursive](https://corecursive.com/)
-- [How To Take Over the World](https://www.httotw.com/)
-<!-- - [ADSP](https://adspthepodcast.com/) -->
-- [LambdaCast](https://soundcloud.com/lambda-cast)
-- [Deep Dive with Ali Abdaal](https://aliabdaal.com/podcast/)
-
-&nbsp;
-
-    </p>
-
-# Gear
-
-## Everyday Carry
-
-- [Aer City Pack Pro](https://www.aersf.com/city-pack-pro-black)
-- [Moft MagSafe Wallet](https://amzn.to/3RUCEeS)
-  - Game changer. I've gifted it to three people who all love it as well.
-- [AirPods Pro Gen 2](https://amzn.to/3xkVemT)
-  - A significant upgrade from the first generation.
-- [Kindle Paperwhite](https://amzn.to/3RYzRB6)
-  - I tend to prefer physical books for denser reads, but a Kindle is a life changing
-    nonetheless. You will likely read more with a dedicated device than you will using the app.
-- [Nomad iPhone Case](https://nomadgoods.com/products/modern-leather-case-horween-black-iphone-14-pro-max)
-- [Nomad Universal Cable](https://nomadgoods.com/products/universal-usb-c-kevlar-cable-0-3m)
-
-## Coffee
-
-- [Option-O Lagom Mini w/ Moonshine Burrs](https://www.option-o.com/shop/lagom-mini)
-  - Compact, does it all, aesthetic—what's not to love?
-- [Fellow Stagg Kettle](https://amzn.to/3ivUBmH)
-- [Hario Switch](https://amzn.to/3VYqz8U)
-- [Aeropress](https://amzn.to/3X3MzjW)
-- [Fellow Stagg Tasting Glasses](https://amzn.to/3vQPiBh)
-- [Weber Bean Cellar](https://weberworkshops.com/products/bean-cellar-glass)
-- [Trade Coffee](https://www.drinktrade.com/)
-- [Onyx Coffee Lab](https://onyxcoffeelab.com/)
-
-## Kitchen
-
-- [Breville Joule Sous Vide](https://amzn.to/3ljCTnq)
-- [Stargazer Cast Iron Skillet](https://stargazercastiron.com/products/12-inch-skillet)
-  <!-- - [Corsori Air Fryer](https://amzn.to/3YhCCzR) -->
-  <!-- - [Burrfection Japanese Knives Store](https://burrfectionstore.com/) -->
-  <!--   - I don't own anything from here yet, but I'm in the market for a Gyoto. -->
-  <!-- - [Usuhari Daïginjo Glass](https://amzn.to/3Yfy2lR) -->
-
+		<p>
+			Sure, genre fiction might not be the most intellectually nourishing material, but it helped me
+			get into reading, and for that I am forever grateful. In fact, the first book I remember
+			reading is Harry Potter during my first year at the University of Chicago. Below are some
+			titles that helped me create a reading habit.
 		</p>
+
+		<h4 class="text-lg font-bold">Science Fiction</h4>
+		<ul class="list-inside list-disc">
+			<li>
+				<a href="https://www.goodreads.com/book/show/18007564-the-martian"
+					>The Martian by Andy Weir</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/54493401-project-hail-mary"
+					>Project Hail Mary by Andy Weir</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/series/189931-remembrance-of-earth-s-past"
+					>Remembrance of Earth's Past by Cixin Liu</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/book/show/42046112-recursion"
+					>Recursion by Blake Crouch</a
+				>
+			</li>
+		</ul>
+
+		<h4 class="text-lg font-bold">Fantasy</h4>
+		<ul class="list-inside list-disc">
+			<li>
+				<a href="https://www.goodreads.com/series/49075-the-stormlight-archive"
+					>The Stormlight Archive by Brandon Sanderson</a
+				>
+			</li>
+			<li>
+				<a href="https://www.goodreads.com/series/45262-the-kingkiller-chronicle"
+					>The Kingkiller Chronicles by Patrick Rothfuss</a
+				>
+			</li>
+		</ul>
+
+		<h2 class="text-xl font-bold">Podcasts</h2>
+		<ul class="list-inside list-disc">
+			<li><a href="https://lexfridman.com/podcast/">Lex Fridman Podcast</a></li>
+			<li><a href="https://hubermanlab.com/">Huberman Lab</a></li>
+			<li><a href="https://corecursive.com/">CoRecursive</a></li>
+			<li><a href="https://www.httotw.com/">How To Take Over the World</a></li>
+			<!--<li><a href="https://adspthepodcast.com/">ADSP</a></li>-->
+			<li><a href="https://soundcloud.com/lambda-cast">LambdaCast</a></li>
+			<li><a href="https://aliabdaal.com/podcast/">Deep Dive with Ali Abdaal</a></li>
+		</ul>
+
+    <h2 class="text-xl font-bold">Gear</h2>
+
+    <h2 class="text-xl font-bold">Everyday Carry</h2>
+    <ul class="list-inside list-disc">
+        <li><a href="https://www.aersf.com/city-pack-pro-black">Aer City Pack Pro</a></li>
+        <li><a href="https://amzn.to/3RUCEeS">Moft MagSafe Wallet</a>
+            <ul class="list-inside list-disc pl-5">
+                <li>Game changer. I've gifted it to three people who all love it as well.</li>
+            </ul>
+        </li>
+        <li><a href="https://amzn.to/3xkVemT">AirPods Pro Gen 2</a>
+            <ul class="list-inside list-disc pl-5">
+                <li>A significant upgrade from the first generation.</li>
+            </ul>
+        </li>
+        <li><a href="https://amzn.to/3RYzRB6">Kindle Paperwhite</a>
+            <ul class="list-inside list-disc pl-5">
+                <li>I tend to prefer physical books for denser reads, but a Kindle is a life changing
+                nonetheless. You will likely read more with a dedicated device than you will using the app.</li>
+            </ul>
+        </li>
+        <li><a href="https://nomadgoods.com/products/modern-leather-case-horween-black-iphone-14-pro-max">Nomad iPhone Case</a></li>
+        <li><a href="https://nomadgoods.com/products/universal-usb-c-kevlar-cable-0-3m">Nomad Universal Cable</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold">Coffee</h2>
+    <ul class="list-inside list-disc">
+        <li><a href="https://www.option-o.com/shop/lagom-mini">Option-O Lagom Mini w/ Moonshine Burrs</a>
+            <ul class="list-inside list-disc pl-5">
+                <li>Compact, does it all, aesthetic—what's not to love?</li>
+            </ul>
+        </li>
+        <li><a href="https://amzn.to/3ivUBmH">Fellow Stagg Kettle</a></li>
+        <li><a href="https://amzn.to/3VYqz8U">Hario Switch</a></li>
+        <li><a href="https://amzn.to/3X3MzjW">Aeropress</a></li>
+        <li><a href="https://amzn.to/3vQPiBh">Fellow Stagg Tasting Glasses</a></li>
+        <li><a href="https://weberworkshops.com/products/bean-cellar-glass">Weber Bean Cellar</a></li>
+        <li><a href="https://www.drinktrade.com/">Trade Coffee</a></li>
+        <li><a href="https://onyxcoffeelab.com/">Onyx Coffee Lab</a></li>
+    </ul>
+
+    <h2 class="text-xl font-bold">Kitchen</h2>
+    <ul class="list-inside list-disc">
+        <li><a href="https://amzn.to/3ljCTnq">Breville Joule Sous Vide</a></li>
+        <li><a href="https://stargazercastiron.com/products/12-inch-skillet">Stargazer Cast Iron Skillet</a></li>
+    </ul>
 	</div>
 </PageLayout>
